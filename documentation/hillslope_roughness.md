@@ -8,7 +8,7 @@ The kinematic roughness equations require a roughness parameter *alpha*, given b
 
 **2. Manning's roughness coefficient**
 
-* Converts land cover raster from NLCD to $n$ using a look up table developed by kalyanapu (2009). 
+* Converts land cover raster from NLCD to $n$ using a look up table developed by Kalyanapu (2009). 
 * Computes area weighted manning coefficient for each hillslope
 * Alternatively, if a landcover dataset is not available or if the tool is applied outside of the United States, the user may supply an estimate of Manning's roughness coefficient or any land cover raster with values that match the NLCD land cover categories. 
 
