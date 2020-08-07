@@ -23,27 +23,43 @@ This repository contains files used in the development of the ArcHydro Critical 
 1. Flow accumulation threshold for stream delineation
 2...
 
-## Tools
+## Toolboxes
 
 The toolkit contains 4 separate toolboxes, which must be executed in order. These toolboxes are outlined in the figure below, and described breifly here. For additional detail on these toolboxes, see the [documentation](https://github.com/anneliesesytsma/archydro_criticalduration/tree/master/documentation) folder.
 
 <img src="https://github.com/anneliesesytsma/archydro_criticalduration/blob/master/figures/gis_process.JPG">
 
 
-### Step 1 Hillslope Delineation
+### Step 1 Hillslope Partitioning
 
-* Stream Delineation
-This tool uses the input DEM and user supplied flow accumulation threshold to delineate stream network. This creates the following outputs: strm_lnk (stream link polyline), strm (stream raster), fac (flow accumulation raster), fdr (flow direction raster)
-
-* Hillslope Delineation
-This tool uses the stream delineation outputs to partition the landscape into hillslopes. The tool does the following:
-** 
+**Stream Delineation**
+* Inputs: DEM, flow accumulation threshold
+* Process: Fills sinks, computes flow direction, flow accumulation, and delineates stream network. 
+* Outputs: strm_lnk (stream link polyline), strm (stream raster), fac (flow accumulation raster), fdr (flow direction raster)
+ 
+ **Hillslope Delineation**
+* Inputs: strm_lnk, strm, fac, fdr (from above)
+* Process: identifies stream inlet points and delineates catchments draining to stream inlet points to give headwater hillslopes; delineates full catchments, mosaics headwater and full catchments, and bisects with stream channel to give lateral hillslopes.
+* Outputs: hillslope (shapefile) with field "hs_type" to designate if hillslope is "headwater" or "lateral"
 
 ### Step 2 Hillslope Roughness
 
+* Inputs: hillslope (shapefile)
+* Process: Computes hillslope roughness coefficient, alpha, from slope and manning's roughness coefficient. Manning's roughness coefficient estimated from land use.
+* Outputs: hillslope (shapefile) with field containing area-weighted alpha value.
+
 ### Step 3 Hillslope Width Function
 
+* Inputs: hillslope (shapefile), n_points
+* Process: 
+* Outputs: hillslope (shapefile) with fields containing *a*, *C*, *L*, *x_0*, *x_end*, *pt_error*, and *shape_error* 
+
+
 ### Step 4 Rational Method Optimization
+
+* Inputs: hillslope (shapefile) with fields containing *a*, *C*, *L*, *x_0*, *x_end*, *pt_error*, and *shape_error* 
+* Process: 
+* Outputs: 
 
 ## Citations
 
