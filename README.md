@@ -45,3 +45,9 @@ This tool uses the stream delineation outputs to partition the landscape into hi
 
 ### Step 4 Rational Method Optimization
 
+## Citations
+
+Lapides, D. A., Sytsma, A., Djokic, D., & Thompson, S. "Critical duration ArcHydro toolbox: development and application of a geospatial tool to predict timescales and peak flows for hillslopes with complex curvature ". In Prep.
+
+
+
