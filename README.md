@@ -17,12 +17,13 @@ This repository contains files used in the development of the ArcHydro Critical 
 ### Data inputs
 1. Digital elevation model (units of m)
 2. Land use raster (NLCD)
-3.........
-
 
 ### User supplied constants
 1. Flow accumulation threshold for stream delineation
-2...
+2. Number of points to use to estimate hillslope width function (default is 24)
+3. Parameters *K* and *b* from intensity-duration-frequency curve function of the form: I = K/(D^b)
+4. Rational method curve number *C* or saturated hydraulic conductivity *K_s*
+5. 
 
 ## Toolboxes
 
