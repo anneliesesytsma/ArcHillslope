@@ -1,4 +1,4 @@
-## Hillslope delineation
+## Hillslope partitioning
 
 **1. Dealineate headwater watersheds**
 
