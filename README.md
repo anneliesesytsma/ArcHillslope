@@ -11,8 +11,6 @@ This repository contains files used in the development of the ArcHydro Critical 
 * The Critical Duration toolbox is available in ArcHydro tools, or can be downloaded separately here. If you download it separately, place it in an appropriate folder on your machine. Navigate to the folder in Catalog. If you expand all the toolsets, you will see the following:
 
 
-
-
 ## Inputs for Critical Duration Toolbox
 
 ### Data inputs
@@ -26,6 +24,12 @@ This repository contains files used in the development of the ArcHydro Critical 
 2...
 
 ## Tools
+
+The toolkit contains 4 separate toolboxes, which must be executed in order. These toolboxes are outlined in the figure below, and described breifly here. For additional detail on these toolboxes, see the "documentation" folder.
+
+<img src="https://github.com/anneliesesytsma/archydro_criticalduration/blob/master/figures/gis_process.JPG">
+
+
 ### Step 1 Hillslope Delineation
 
 * Stream Delineation
@@ -34,4 +38,10 @@ This tool uses the input DEM and user supplied flow accumulation threshold to de
 * Hillslope Delineation
 This tool uses the stream delineation outputs to partition the landscape into hillslopes. The tool does the following:
 ** 
+
+### Step 2 Hillslope Roughness
+
+### Step 3 Hillslope Width Function
+
+### Step 4 Rational Method Optimization
 
