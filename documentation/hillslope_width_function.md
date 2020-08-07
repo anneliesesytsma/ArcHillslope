@@ -4,7 +4,7 @@ A hillslope width function (HWF) represents the topographic shape of a hillslope
 
 This definition requires reconciliation of actual hillslopes with idealized exponential hillslope shapes. We applied two criteria to the process of delineating hillslope width functions, following Noel et al. (2014): (1) monotonicity and (2) conservation of area. Montonicity ensures that the hillslope width function is convergent (monotonically increasing), divergent (monotonically decreasing), or constant (uniform), while conservation of area fulfills mass conservation requirements.
 
-<figures/hwf_process.jpg>
+https://github.com/anneliesesytsma/archydro_criticalduration/blob/master/figures/hwf_process.jpg
 
 
 **1. Hillslope outlines** 
