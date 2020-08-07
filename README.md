@@ -1,6 +1,6 @@
-## Critical duration ArcHydro compatible ArcGIS toolbox
+## Critical duration ArcHydro toolkit
 
-An ArcHydro toolbox for calculating time of concentration, critical duration, and peak flows from hillslopes of complex curvature.
+An ArcHydro toolkit for calculating time of concentration, critical duration, and peak flows from hillslopes of complex curvature.
 
 This repository contains files used in the development of the ArcHydro Critical Duration toolbox. This includes: (1) the ArcHydro toolbox with python scripts and tool UI; (2) example datasets; and (3) tool documentation.
 
@@ -11,7 +11,7 @@ This repository contains files used in the development of the ArcHydro Critical 
 * The Critical Duration toolbox is available in ArcHydro tools, or can be downloaded separately here. If you download it separately, place it in an appropriate folder on your machine. Navigate to the folder in Catalog. If you expand all the toolsets, you will see the following:
 
 
-## Inputs for Critical Duration Toolbox
+## Inputs for Critical Duration Toolkit
 
 ### Data inputs
 1. Digital elevation model (units of m)
