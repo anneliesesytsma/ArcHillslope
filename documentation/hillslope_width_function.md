@@ -7,19 +7,22 @@ This definition requires reconciliation of actual hillslopes with idealized expo
 <img src="https://github.com/anneliesesytsma/archydro_criticalduration/blob/master/figures/hwf_process.jpg">
 
 
-**1. Hillslope outlines** 
+**1. Points along hillslope boundary** 
 
 * Hillslopes are converted to polylines and the stream network is erased from the polyline, resulting in hillslope outlines with a discontinuity at the outlet location. 
 * Two points were generated along the hillslope outlet (we will refer to these as the "outlet points"), placed at either endpoint of the discontinuity, and a line was formed from these two points ("outlet line"). 
 * n equally spaced points are generated along the hillslope polyline ("hillslope points").
 
-**2. Hillslope point pairs**
+**2. Pair points across midline**
 
 * Next, the n hillslope points are paired with the corresponding point across the hillslope, and a midline is drawn up the vertical axis of the hillslope, given by the best fit line for the midpoints of each point pair. This midline is the $x$-axis for defining the HWF. 
 * The midline separates the hillslope points into points to the left and right of the midline. 
+
+**3. Compute W and x for each hillslope point pair**
+
 * For each point on the right, the perpendicular distance to the midline is the width of the right half, and the perpendicular distance to the outlet is used to find the position along the $x$-axis as a distance from the divide. 
 
-**3. Exponential fit**
+**3. Hillslope width function**
 
 * From these paired distances and widths, the tool calculates the parameters *C* and *a*, which provide the optimal best fit for the right side of the hillslope. The same is done for the left side of the hillslope. 
 * An overall exponential fit is found by calculating the exponential function which equates to the sum of the left and right sides to calculate final values of *C* and *a*. 
