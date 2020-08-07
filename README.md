@@ -10,6 +10,7 @@ This repository contains files used in the development of the ArcHydro Critical 
 * Ensure that you have the Spatial Analyst extension and the most recent version of ArcHydro tools. ArcHydro is available for download at the following link: http://downloads.esri.com/archydro/archydro/
 * The Critical Duration toolbox is available in ArcHydro tools, or can be downloaded separately here. If you download it separately, place it in an appropriate folder on your machine. Navigate to the folder in Catalog. If you expand all the toolsets, you will see the following:
 
+<img src="https://github.com/anneliesesytsma/archydro_criticalduration/blob/master/figures/Toolbox.JPG">
 
 ## Inputs for Critical Duration Toolkit
 
