@@ -30,7 +30,7 @@ Land Cover| Description	| Manning's n
 82		| Cultivated crops		| 0.037
 90		| Woody wetlands		| 0.086
 95		| Emergent herbaceous wetlands	| 	0.1825
------------- | 
+------------ ------------ ------------| 
 Kalyanapu, A. J. (2009). Effect of land use-based surface roughness on hydrologic model output. Journal of Spatial Hydrology, 9(2), 21.
 
 
