@@ -60,8 +60,8 @@ The toolkit contains 4 separate toolboxes, which must be executed in order. Thes
 ### Step 4 Rational Method Optimization
 
 * Inputs: hillslope (shapefile) with fields containing *a*, *C*, *L*, *x_0*, *x_end*, *pt_error*, and *shape_error*; Parameters *K* and *b* from intensity-duration-frequency curve function of the form: I = K/(D^b); Rational method curve number *C* or saturated hydraulic conductivity *K_s*
-* Process: simulates overland flow across each hillslope using analytical solution, calculates *D_crit* (time of max flow), *Tc* (time that the entire hillslope contributes to flow at the outlet),  *Qmax* (peak flow for the return interval), and ratio *Tc/D_crit*.
-* Outputs: hillslope (shapefile) with fields containing *D_crit*, *Tc*, *Qmax* and *Tc/D_crit*
+* Process: simulates overland flow across each hillslope using analytical solution, calculates *D_crit* (time of max flow), *Tc* (time that the entire hillslope contributes to flow at the outlet),  *Qmax* (peak flow for the return interval), and ratio *D_crit/Tc*.
+* Outputs: hillslope (shapefile) with fields containing *D_crit*, *Tc*, *Qmax* and *D_crit/Tc*
 
 ## Citations
 
