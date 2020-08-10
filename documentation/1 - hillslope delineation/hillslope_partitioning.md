@@ -9,6 +9,7 @@
 **2. Dealineate full watersheds**
 
 * Delineates watersheds drained by stream network using the ArcHydro watershed grid delineation tool. 
+* Cleans and groups resulting watersheds to merge tiny watersheds with nearby watersheds (using "Region Group", "Region Lookup", and "Nibble" tools)
 
 **3. Combine headwater and full watersheds**
 
@@ -18,5 +19,5 @@
 **4. Bisect watershed with stream network**
 
 * Bisects the mosaiced watershed shapefile by the stream network (using the "Union" tool) to create two lateral and one headwater hillslope. 
-* Cleans and groups resulting hillslopes to merge small hillslopes with larger hillslopes (using "Region Group", "Region Lookup", and "Nibble" tools)
+* Cleans and groups resulting hillslopes to merge tiny hillslopes with nearby hillslopes (using "Region Group", "Region Lookup", and "Nibble" tools)
 * Exports to  final shapefile format. A column in the final hillslope shapefile titled "hs_type" designates whether the hillslope is a 'headwater' or 'lateral' hillslope.
