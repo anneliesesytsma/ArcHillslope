@@ -9,12 +9,12 @@
 **2. Dealineate full watersheds**
 
 * Delineates watersheds drained by stream network using the ArcHydro watershed grid delineation tool. 
-* Cleans and groups resulting watersheds to merge tiny watersheds with nearby watersheds (using "Region Group", "Region Lookup", and "Nibble" tools)
 
 **3. Combine headwater and full watersheds**
 
 * Mosaics the headwater watersheds and full watersheds into a new raster. 
 * Exports mosaiced watershed raster to a shapefile.
+* Cleans and groups resulting mosaiced watersheds to merge tiny watersheds with nearby watersheds (using "Region Group", "Region Lookup", and "Nibble" tools)
 
 **4. Bisect watershed with stream network**
 
