@@ -23,7 +23,7 @@ This repository contains files used in the development of the ArcHydro Critical 
 2. Number of points to use to estimate hillslope width function (default is 24)
 3. Parameters *K* and *b* from intensity-duration-frequency curve function of the form: I = K/(D^b)
 4. Rational method curve number *C* or saturated hydraulic conductivity *K_s*
-5. 
+
 
 ## Toolboxes
 
@@ -42,26 +42,26 @@ The toolkit contains 4 separate toolboxes, which must be executed in order. Thes
  **Hillslope Delineation**
 * Inputs: strm_lnk, strm, fac, fdr (from above)
 * Process: identifies stream inlet points and delineates catchments draining to stream inlet points to give headwater hillslopes; delineates full catchments, mosaics headwater and full catchments, and bisects with stream channel to give lateral hillslopes.
-* Outputs: hillslope (shapefile) with field "hs_type" to designate if hillslope is "headwater" or "lateral"
+* Outputs: hillslope (shapefile) with field "hs_type" to designate if hillslope is "headwater" or "lateral", stream_network (polyline)
 
 ### Step 2 Hillslope Roughness
 
 * Inputs: hillslope (shapefile)
-* Process: Computes hillslope roughness coefficient, alpha, from slope and manning's roughness coefficient. Manning's roughness coefficient estimated from land use.
+* Process: computes hillslope roughness coefficient, alpha, from slope and manning's roughness coefficient. Manning's roughness coefficient estimated from land use.
 * Outputs: hillslope (shapefile) with field containing area-weighted alpha value.
 
 ### Step 3 Hillslope Width Function
 
-* Inputs: hillslope (shapefile), n_points
-* Process: 
+* Inputs: hillslope (shapefile), stream_network (polyline), n_points (integer)
+* Process: fits each hillslope delineated with a best-fit exponential hillslope width function of the form W = ce^ax, where W is the width of the hillslope and X is the distance from the hillslope divide. 
 * Outputs: hillslope (shapefile) with fields containing *a*, *C*, *L*, *x_0*, *x_end*, *pt_error*, and *shape_error* 
 
 
 ### Step 4 Rational Method Optimization
 
-* Inputs: hillslope (shapefile) with fields containing *a*, *C*, *L*, *x_0*, *x_end*, *pt_error*, and *shape_error* 
-* Process: 
-* Outputs: 
+* Inputs: hillslope (shapefile) with fields containing *a*, *C*, *L*, *x_0*, *x_end*, *pt_error*, and *shape_error*; Parameters *K* and *b* from intensity-duration-frequency curve function of the form: I = K/(D^b); Rational method curve number *C* or saturated hydraulic conductivity *K_s*
+* Process: simulates overland flow across each hillslope using analytical solution, calculates *D_crit* (time of max flow), *Tc* (time that the entire hillslope contributes to flow at the outlet),  *Qmax* (peak flow for the return interval), and ratio *Tc/D_crit*.
+* Outputs: hillslope (shapefile) with fields containing *D_crit*, *Tc*, *Qmax* and *Tc/D_crit*
 
 ## Citations
 
