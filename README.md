@@ -34,12 +34,12 @@ The toolkit contains 4 separate toolboxes, which must be executed in order. Thes
 
 ### Step 1 Hillslope Partitioning
 
-**Stream Delineation**
+**1a. Stream Delineation**
 * Inputs: DEM, flow accumulation threshold
 * Process: Fills sinks, computes flow direction, flow accumulation, and delineates stream network. 
 * Outputs: strm_lnk (stream link polyline), strm (stream raster), fac (flow accumulation raster), fdr (flow direction raster)
  
- **Hillslope Delineation**
+ **1b. Hillslope Delineation**
 * Inputs: strm_lnk, strm, fac, fdr (from above)
 * Process: identifies stream inlet points and delineates catchments draining to stream inlet points to give headwater hillslopes; delineates full catchments, mosaics headwater and full catchments, and bisects with stream channel to give lateral hillslopes.
 * Outputs: hillslope (shapefile) with field "hs_type" to designate if hillslope is "headwater" or "lateral", stream_network (polyline)
