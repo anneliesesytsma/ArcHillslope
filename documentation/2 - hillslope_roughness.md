@@ -1,6 +1,6 @@
 ## Hillslope roughness tool
 
-The kinematic roughness equations require a roughness parameter *alpha*, given by *alpha = SQRT(S_o)/n*, where *S_o* is slope [L/L] and *n* is Manning's roughness coefficient.  This step computes: (1) the average slope $S_o$; and (2) the area-weighted Manning's roughness coefficient *n*. 
+The kinematic roughness equations require a roughness parameter *alpha*, given by *alpha = SQRT(S_o)/n*, where *S_o* is slope [L/L] and *n* is Manning's roughness coefficient.  This step computes: (1) the average slope *S_o*; and (2) the area-weighted Manning's roughness coefficient *n*. 
 
 **1. Slope**
 
