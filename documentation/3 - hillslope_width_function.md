@@ -1,6 +1,6 @@
 ## Hillslope width function tool
 
-A hillslope width function (HWF) represents the topographic shape of a hillslope. We denote a line from the divide of a hillslope to the outlet as the x-axis. At each value x along the hillslope, the width *w(x)* represents the linear distance between contour endpoints. For analytical tractability, Lapides et al. (2020) assumed an exponential shape for the HWF given by: *W(x) = ce^x*
+A hillslope width function (HWF) represents the topographic shape of a hillslope. We denote a line from the divide of a hillslope to the outlet as the x-axis. At each value x along the hillslope, the width *w(x)* represents the linear distance between contour endpoints. For analytical tractability, Lapides et al. (2020) assumed an exponential shape for the HWF given by: *W(x) = ce^ax*
 
 This definition requires reconciliation of actual hillslopes with idealized exponential hillslope shapes. We applied two criteria to the process of delineating hillslope width functions, following Noel et al. (2014): (1) monotonicity and (2) conservation of area. Montonicity ensures that the hillslope width function is convergent (monotonically increasing), divergent (monotonically decreasing), or constant (uniform), while conservation of area fulfills mass conservation requirements.
 
@@ -32,7 +32,7 @@ This definition requires reconciliation of actual hillslopes with idealized expo
 * To ensure that area is conserved in the exponential fit, we keep the location of the outlet (so as to maintain the same outlet width) and calculate the location of the divide that preserves the area of original hillslope. 
 * Using the x-location of the hillslopes divide (*x_0*) and outlet (*x_end*) and the exponential best fit parameters for *C* and *a*, we fully describe the exponential HWF.
 
-**4. Error metrics** 
+**5. Error metrics** 
 
 * "point selection error": computed as the percent error between the actual hillslope area and the polygon area constrained by the  hillslope points and outlet points. This metric is indicative of the degree to which the points chosen represent the hillslope shape. If the area bounded by the points is not representative of the shape or area of the original hillslope, the point selection error will be large. 
 * "shape error": defined as the error between the observed hillslope width at the given point and the width predicted by the HWF, can arise when an exponential HWF is a poor fit to the hillslope shape. The ArcGIS tool computes the shape error metric as the root mean square error (normalized by the difference between the maximum and minimum observed width) between the observed hillslope width values and predicted hillslope width values  (NRMSE). This is done separately for the right and left sides, and the average NRMSE for each hillslope is recorded in the output. This metric indicates how well the exponential fit approximates the actual hillslope width, smaller values indicating better fit.
